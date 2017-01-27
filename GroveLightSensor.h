@@ -14,11 +14,11 @@ class GroveLightSensor {
 		unsigned int _performMesurement(); 
 
 	public:
-		GroveLightSensor(GrovePin pins, unsigned int _maxMesurement = 761);
+		GroveLightSensor(GrovePin pins, unsigned int maxMesurement = 761);
 		virtual ~GroveLightSensor() {};
 		void initialize();
 		float getIntensity();
-		void setMaxMesurement(float maxPosition);
+		void setMaxMesurement(unsigned int maxMesurement);
 };
 
 #endif

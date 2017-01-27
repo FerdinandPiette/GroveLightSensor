@@ -18,6 +18,6 @@ float GroveLightSensor::getIntensity() {
 	return position;
 }
 
-void GroveLightSensor::setMaxMesurement(float maxMesurement) {	
+void GroveLightSensor::setMaxMesurement(unsigned int maxMesurement) {	
 	this->_maxMesurement = maxMesurement;
 }
