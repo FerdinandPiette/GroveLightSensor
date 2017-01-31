@@ -1,11 +1,11 @@
 #include "GroveLightSensor.h"
 
-GroveLightSensor::GroveLightSensor(GrovePin pins, unsigned int maxMesurement) {
+GroveLightSensor::GroveLightSensor() {}
+
+void GroveLightSensor::initialize(GrovePin pins, unsigned int maxMesurement) {
 	this->_pinSensor = pins.pin1;
 	this->setMaxMesurement(maxMesurement);
 }
-
-void GroveLightSensor::initialize() {}
 
 unsigned int GroveLightSensor::_performMesurement() {
 	return analogRead(this->_pinSensor);

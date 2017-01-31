@@ -5,13 +5,12 @@ Light Sensor Library for Arduino + Grove shield
 
 ##Example
 ```c++
-#include <Grove.h>
 #include <GroveLightSensor.h>
 
-GroveLightSensor lightSensor(GROVE_A3);
+GroveLightSensor lightSensor;
 
 void setup() {
-  lightSensor.initialize();
+  lightSensor.initialize(GROVE_A3);
   Serial.begin(9200);
 }
 
@@ -23,13 +22,12 @@ void loop() {
 
 ##Documentation
 
-###`GroveLightSensor(GrovePin pins, unsigned int maxMesurement = 761)`
+###`void initialize(GrovePin pins, unsigned int maxMesurement = 761)`
+Initialize the sensor before using it.
+
 Parameters:
 - `pins`: Must be a analog socket (GROVE_A0 to GROVE_A3)
 - `maxMesurement`: A number between 0 and 1024 corresponding the the maximum light intensity at the output of the A/D sensor
-
-###`void initialize()`
-Initialize the sensor before using it.
 
 ###`float getIntensity()`
 Return the intensity of the light from 0 (no light) to 1 (maximum intensity).
